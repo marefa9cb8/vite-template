@@ -8,7 +8,7 @@ import eslintPluginReact from 'eslint-plugin-react'
 export default [
   {
     name: 'ignore files',
-    ignores: ['dist/*', '.prettierrc.cjs', '*.config.{js,ts}'],
+    ignores: ['dist/*', '*.config.{js,ts}'],
   },
   {
     name: 'global settings',
