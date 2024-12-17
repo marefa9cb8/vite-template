@@ -4,7 +4,7 @@ import tseslint from 'typescript-eslint'
 import eslintConfigPrettier from 'eslint-config-prettier'
 import eslintPluginReact from 'eslint-plugin-react'
 
-/** @type {import("eslint").Linter.FlatConfig[]} */
+/** @type {import("eslint").Linter.Config[]} */
 export default [
   {
     name: 'ignore files',
@@ -21,7 +21,8 @@ export default [
     linterOptions: { reportUnusedDisableDirectives: 'error' },
   },
   js.configs.recommended,
-  ...tseslint.configs.recommendedTypeChecked,
+  ...tseslint.configs.strictTypeChecked,
+  ...tseslint.configs.stylisticTypeChecked,
   eslintConfigPrettier,
   {
     name: '一時的にOFFにしたRules',
