@@ -11,6 +11,10 @@ updates:
       interval: 'daily'
     commit-message:
       prefix: 'fix'
+    # セキュリティ更新のみを有効にし、通常のバージョン更新を無効にする
     open-pull-requests-limit: 0
+    # セキュリティ更新だけを許可する明示的な設定
     allow:
-      - dependency-type: 'security'
+      - dependency-type: 'direct'
+        dependency-name: '*'
+        update-types: ['security']
