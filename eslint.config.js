@@ -24,9 +24,11 @@ export default [
     },
     linterOptions: { reportUnusedDisableDirectives: 'error' },
     settings: { react: { version: 'detect' } },
+  },
+  {
+    name: 'ignore settings',
     ignores: ['dist/*', '*.config.{js,ts}', 'node_modules/*'],
   },
-
   // ==========================================
   // 標準設定 (推奨設定を活用)
   // ==========================================
