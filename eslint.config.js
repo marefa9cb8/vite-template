@@ -54,13 +54,6 @@ export default [
       '@typescript-eslint/no-import-type-side-effects': 'error',
 
       // コード品質に関するルール
-      'no-console': 'warn',
-      'no-debugger': 'warn',
-      'no-alert': 'warn',
-      '@typescript-eslint/no-unused-vars': [
-        'warn',
-        { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
-      ],
       'prefer-const': 'error',
       'no-var': 'error',
       'eqeqeq': ['error', 'always', { null: 'ignore' }],
