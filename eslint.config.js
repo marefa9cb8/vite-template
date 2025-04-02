@@ -1,7 +1,7 @@
 import js from '@eslint/js'
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
-import eslintConfigPrettier from 'eslint-config-prettier'
+import eslintConfigPrettier from 'eslint-config-prettier/flat'
 import eslintPluginReact from 'eslint-plugin-react'
 import eslintPluginReactHooks from 'eslint-plugin-react-hooks'
 //import eslintPluginTailwindcss from 'eslint-plugin-tailwindcss'
@@ -27,16 +27,16 @@ export default [
   },
   {
     name: 'ignore settings',
-    ignores: ['dist/*', '*.config.{js,ts}', 'node_modules/*'],
+    ignores: ['dist/*', '*.config.{js,ts}'],
   },
   // ==========================================
   // 標準設定 (推奨設定を活用)
   // ==========================================
-  js.configs.recommended,
+  { name: '@eslint/js', ...js.configs.recommended },
   ...tseslint.configs.strictTypeChecked,
   ...tseslint.configs.stylisticTypeChecked,
-  eslintPluginReact.configs.flat.recommended,
-  eslintPluginReact.configs.flat['jsx-runtime'],
+  { name: 'react', ...eslintPluginReact.configs.flat.recommended },
+  { name: 'react-jsx', ...eslintPluginReact.configs.flat['jsx-runtime'] },
   eslintPluginReactHooks.configs['recommended-latest'],
   // eslintPluginTailwindcss.configs.recommended,
 
