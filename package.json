@@ -11,12 +11,15 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "lint": "eslint . && prettier --check .",
-    "lint:fix": "eslint . --fix",
-    "lint:format": "prettier --write .",
-    "test": "npm run lint && tsc --noEmit && npm run vitest",
-    "preview": "vite preview",
-    "vitest": "vitest run"
+    "lint": "npm run lint:eslint && npm run lint:prettier && npm run lint:types",
+    "lint:eslint": "eslint .",
+    "lint:prettier": "prettier --check .",
+    "lint:types": "tsc --noEmit",
+    "lint:fix": "npm run lint:eslint:fix && npm run lint:prettier:fix",
+    "lint:eslint:fix": "eslint . --fix",
+    "lint:prettier:fix": "prettier --write .",
+    "test": "vitest run",
+    "preview": "vite preview"
   },
   "dependencies": {
     "react": "19.1.0",
