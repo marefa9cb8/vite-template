@@ -15,9 +15,9 @@
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier --check .",
     "lint:types": "tsc --noEmit",
-    "lint:fix": "npm run lint:eslint:fix && npm run lint:prettier:format",
+    "lint:fix": "npm run lint:eslint:fix && npm run lint:prettier:fix",
     "lint:eslint:fix": "eslint . --fix",
-    "lint:prettier:format": "prettier --write .",
+    "lint:prettier:fix": "prettier --write .",
     "test": "vitest run",
     "preview": "vite preview"
   },
