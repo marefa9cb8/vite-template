@@ -6,4 +6,5 @@ export default {
   semi: false,
   singleQuote: true,
   jsxSingleQuote: true,
+  plugins: ['@prettier/plugin-oxc'],
 }
