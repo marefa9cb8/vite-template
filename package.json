@@ -13,11 +13,11 @@
     "build": "tsc && vite build",
     "lint": "npm run lint:eslint && npm run lint:prettier && npm run lint:types",
     "lint:eslint": "eslint .",
-    "lint:prettier": "prettier --check .",
+    "lint:prettier": "prettier --check --experimental-cli .",
     "lint:types": "tsc --noEmit",
     "lint:fix": "npm run lint:eslint:fix && npm run lint:prettier:fix",
     "lint:eslint:fix": "eslint . --fix",
-    "lint:prettier:fix": "prettier --write .",
+    "lint:prettier:fix": "prettier --write --experimental-cli .",
     "test": "vitest run",
     "preview": "vite preview"
   },
